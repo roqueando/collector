@@ -16,7 +16,7 @@ LOG_MODULE_REGISTER(main, CONFIG_APP_LOG_LEVEL);
 #define BLINK_PERIOD_MS_STEP 100U
 #define BLINK_PERIOD_MS_MAX  1000U
 
-int main(void)
+extern "C" int main(void)
 {
 	int ret;
 	unsigned int period_ms = BLINK_PERIOD_MS_MAX;
@@ -77,4 +77,3 @@ int main(void)
 
 	return 0;
 }
-
