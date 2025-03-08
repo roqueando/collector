@@ -1,0 +1,25 @@
+# Copyright (c) 2021 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  self:
+    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+    - name: espressif
+      url-base: https://github.com/espressif
+
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v4.0.0
+      import:
+        name-allowlist:
+          - hal_esp32 # required by the nucleo_f302r8 board (STM32 based)
+
+    - name: esp-idf
+      remote: espressif
+      revision: v5.4
