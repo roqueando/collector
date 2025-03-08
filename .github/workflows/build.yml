@@ -27,11 +27,11 @@ jobs:
       - name: Setup Zephyr project
         uses: zephyrproject-rtos/action-zephyr-setup@v1
         with:
-          app-path: collector
+          app-path: .
           toolchains: arm-zephyr-eabi
 
       - name: Build firmware
-        working-directory: collector
+        working-directory: .
         shell: bash
         run: |
           if [ "${{ runner.os }}" = "Windows" ]; then
