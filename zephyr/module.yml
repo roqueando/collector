@@ -1,6 +1,3 @@
-# Copyright (c) 2021 Nordic Semiconductor ASA
-# SPDX-License-Identifier: Apache-2.0
-
 build:
   # Path to the Kconfig file that will be sourced into Zephyr Kconfig tree under
   # Zephyr > Modules > example-application. Path is relative from root of this
@@ -18,7 +15,3 @@ build:
     # `<dts_root>/dts/bindings` for additional dts binding files. The `.` is
     # the root of this repository.
     dts_root: .
-runners:
-  # Additional runners, Zephyr will import these when discovering
-  # subclasses of the `ZephyrBinaryRunner` class.
-  - file: scripts/example_runner.py

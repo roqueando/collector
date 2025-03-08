@@ -2,15 +2,12 @@
 # SPDX-License-Identifier: Apache-2.0
 
 manifest:
-  self:
-    west-commands: scripts/west-commands.yml
-
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
 
-    - name: espressif
-      url-base: https://github.com/espressif
+    #- name: espressif
+    #  url-base: https://github.com/espressif
 
   projects:
     - name: zephyr
@@ -18,8 +15,9 @@ manifest:
       revision: v4.0.0
       import:
         name-allowlist:
-          - hal_esp32 # required by the nucleo_f302r8 board (STM32 based)
+          - hal_espressif
 
-    - name: esp-idf
-      remote: espressif
-      revision: v5.4
+    # maybe this is unneeded
+    #- name: esp-idf
+    #  remote: espressif
+    #  revision: v5.4
