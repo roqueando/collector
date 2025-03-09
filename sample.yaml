@@ -2,9 +2,11 @@
 # the Zephyr testing tool. In this file, multiple combinations can be specified,
 # so that you can easily test all of them locally or in CI.
 sample:
-  description: Collector
+  description: Collector sample
   name: collector
 common:
+  min_ram: 2
+  min_flash: 16
   build_only: true
   integration_platforms:
     - esp32c3_devkitm
